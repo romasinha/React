@@ -8,10 +8,16 @@ const Blog = () => {
         {title: 'I am mad', body: 'fiuhr', author: 'uvnklv', id:2},
         {title: 'Love is everything', body: 'fiuhr', author: 'uvnklv', id:3}
     ])
+
+    const [persons, setPersons] =useState([
+        {name:'Roma', age: 22},
+        {name:'Gaurangi', age:20},
+        {name:"Ishieta", age:20}
+    ])
     return (
         <div className = "home">
 
-            <BlogList blogs={blogs}/> 
+            <BlogList blogs={blogs} persons={persons}/> 
         </div>
         //first wala blogs is the name of the props and bracket wala is the thing we want to pass on
     )

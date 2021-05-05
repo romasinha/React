@@ -2,7 +2,9 @@
 
 const BlogList = (props)=>{
     const blogs = props.blogs; //props is the entire object and we need blogs property of that object
-    console.log(props, blogs); //props is the object sent to this component from parent component
+    const persons = props.persons;
+    console.log(props, blogs, persons)
+    //props is the object sent to this component from parent component
     //blogs is the array thing
     return(
        <div className = 'bloglist'>
@@ -12,6 +14,13 @@ const BlogList = (props)=>{
                    <h3>{blog.author}</h3>
                </div>
            ))}
+            {persons.map((person)=>(
+                <div className = "person=preview">
+                <h2>{person.name}</h2>
+                <h1>{person.age}</h1>
+                </div>
+            ))}
+           
        </div>
     );
 }
