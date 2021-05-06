@@ -1,0 +1,28 @@
+{
+  "blogs": [
+    {
+      "title": "My first blog",
+      "body": "Why do we use it?",
+      "author": "mario",
+      "id": 1
+    },
+    {
+      "title": "My second blog",
+      "body": "What the fuck are you upto?",
+      "author": "Roma",
+      "id": 2
+    },
+    {
+      "title": "Roma",
+      "body": "What are you doing?",
+      "author": "Roma",
+      "id": 3
+    },
+    {
+      "title": "Ayushi's Blog",
+      "body": "Ayushi is a good girl",
+      "author": "Ayushi",
+      "id": 4
+    }
+  ]
+}

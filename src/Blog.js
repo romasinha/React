@@ -1,29 +1,21 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import BlogList from './BlogList'
+import useFetch from './useFetch'
+
 
 const Blog = () => {
 
-    const [blogs, setBlogs] = useState([
-        {title: 'What a world', body: 'fiuhr', author: 'uvnklv', id:1},
-        {title: 'I am mad', body: 'fiuhr', author: 'uvnklv', id:2},
-        {title: 'Love is everything', body: 'fiuhr', author: 'uvnklv', id:3}
-    ])
-
-    const handleDelete=(id)=>{
-         const newBlogs = blogs.filter(blog=> blog.id!==id);
-         setBlogs(newBlogs)
-         
-    }
-
-    const [persons, setPersons] =useState([
-        {name:'Roma', age: 22},
-        {name:'Gaurangi', age:20},
-        {name:"Ishieta", age:20}
-    ])
+    const {data:blogs, isPending, error} = useFetch(' http://localhost:8000/blogs')
+    
+    //fetch the data, res obj return as json then set blogs to new data
+    
+    
+    
     return (
         <div className = "home">
-
-            <BlogList blogs={blogs} persons={persons} handleDelete={handleDelete}/> 
+            {error && <div>{error}</div>}
+            {isPending && <div>IsLoading...</div>}
+            {blogs && <BlogList blogs={blogs} />}
             
         </div>
         //first wala blogs is the name of the props and bracket wala is the thing we want to pass on

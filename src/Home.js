@@ -1,4 +1,5 @@
 import React from 'react'
+import Blog from './Blog'
 
 const Home = () => {
     //Function with no parameters, simply called on event
@@ -12,11 +13,7 @@ const Home = () => {
     return (
         <div>
             <h2>HomePage</h2>
-            <button onClick = {handleClick}>Click me!</button>
-            
-            <button onClick = {()=>{ 
-                handleClickTwo('Roma')
-            }}>Click me again!</button> 
+            <Blog/>
         </div>
     )
 }

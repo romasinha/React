@@ -9,7 +9,7 @@ const Effect = () => {
     useEffect(()=>{
         console.log('Effect ran!')
         console.log(name)
-    }, [name]) //UseEffect runs only at the time of rendering of pages
+    }, []) //UseEffect runs only at the time of rendering of pages
     //but whatever is defined in the square brackets, if changed, then useEffect runs again
 
     
